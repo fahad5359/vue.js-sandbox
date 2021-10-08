@@ -10,23 +10,35 @@
 
 <body>
 
-  <div id="diiv">
-    <!-- اذا ما خاب ضني انه سوينا فنكشن داخل الاب وربطناها بال اتشتي ام ال ثم نادينا الفاريبل الى ملف اتشتي ام ال-->
-    {{greeting}}
+  <div id="place">
+    {{ mcar }}
+    {{ tree }}
+
   </div>
 
   <!-- عشان تربط ال فيو مع صفحتنا حط الرابط ذا -->
   <script src="https://unpkg.com/vue@next"></script>
   <script>
-    let app = Vue.createApp({
-      data: function () {
-        return {
-          greeting: "hey there "
+    // let app = Vue.createApp({
+    //   data: function () {
+    //     return {
+    //       greeting: "hey there"
+    //     }
+    //   }
+    // })
+    // app.mount("#diiv")
+
+    // يعني هل البرنامج كله راج يعيش داخل الاب ؟
+    // an instance can be treeted the same as an object..
+    let Myapp = Vue.createApp({
+      // we put the function inside of data 
+      data: function() {
+           return {
+             mcar: 'hello i am a car',tree: "heey i am tree",
         }
       }
     })
-    app.mount("#diiv")
- 
+    Myapp.mount("#place")
   </script>
 
 </body>
